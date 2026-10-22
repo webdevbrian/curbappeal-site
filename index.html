@@ -8,6 +8,10 @@
   <meta property="og:title" content="Curb Appeal">
   <meta property="og:description" content="Mow perfect stripes and grow a cozy lawn care business, one tidy yard at a time. A relaxing pixel-art game for iPhone, iPad and Android.">
   <meta property="og:image" content="https://webdevbrian.github.io/curbappeal-site/shots/mowing.png">
+  <meta property="og:video" content="https://webdevbrian.github.io/curbappeal-site/video/trailer.mp4">
+  <meta property="og:video:type" content="video/mp4">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
   <meta property="og:url" content="https://webdevbrian.github.io/curbappeal-site/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -23,8 +27,16 @@
     <p class="tagline">Mow perfect stripes. Grow a cozy business.</p>
     <nav><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a></nav>
     <figure class="screen">
-      <img src="shots/mowing.png" alt="A summer morning on Maple Street: a lawn half mown in crisp light and dark stripes, the mower working along its lane.">
+      <video id="trailer" src="video/trailer.mp4" poster="video/trailer-poster.jpg" autoplay muted loop playsinline controls preload="auto" width="1280" height="720" aria-label="The Curb Appeal trailer: mowing stripes in lanes, taking a call, a five-star review, the crew at work, raking fall leaves, snowblowing a drive, driving across town, a find in the grass, and the radio at dusk."></video>
     </figure>
+    <script>
+      // (Asked for less motion: the trailer waits for a tap on play.)
+      if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const v = document.getElementById('trailer');
+        v.removeAttribute('autoplay');
+        v.pause();
+      }
+    </script>
     <p class="soon">Coming soon to iPhone, iPad and Android</p>
   </header>
 

@@ -29,7 +29,8 @@ header nav a { color: #fffaf0; font-weight: 600; text-shadow: 0 2px 0 rgba(30, 4
 .hero { padding-bottom: 40px; }
 .tagline { font-size: 20px; }
 .screen { margin: 28px auto 0; max-width: 960px; padding: 10px; background: var(--night); border-radius: 22px; box-shadow: 0 8px 0 rgba(30, 42, 26, .45); }
-.screen img { display: block; width: 100%; border-radius: 12px; }
+.screen img, .screen video { display: block; width: 100%; height: auto; border-radius: 12px; }
+.screen video { aspect-ratio: 16 / 9; background: var(--night); }
 .soon { margin-top: 20px; font-weight: 700; font-size: 16px; letter-spacing: .3px; }
 
 main { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
@@ -66,5 +67,5 @@ footer nav a { font-weight: 600; }
   header h1 { font-size: 32px; }
   .how, .gallery { grid-template-columns: 1fr; }
   .screen { padding: 6px; border-radius: 16px; }
-  .screen img { border-radius: 10px; }
+  .screen img, .screen video { border-radius: 10px; }
 }
