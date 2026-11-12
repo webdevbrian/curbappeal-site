@@ -32,7 +32,9 @@ header nav a { color: #fffaf0; font-weight: 600; text-shadow: 0 2px 0 rgba(30, 4
 .screen img, .screen video { display: block; width: 100%; height: auto; border-radius: 12px; }
 .screen video { aspect-ratio: 16 / 9; background: var(--night); }
 .get { margin-top: 22px; }
-.get img { display: inline-block; height: 60px; width: auto; }
+.get { display: flex; flex-wrap: wrap; gap: 12px 16px; justify-content: center; align-items: center; }
+.get a { display: block; line-height: 0; }
+.get img { display: block; height: 60px; width: auto; }
 .get + .soon { margin-top: 10px; font-size: 14px; }
 .soon { margin-top: 20px; font-weight: 700; font-size: 16px; letter-spacing: .3px; }
 
@@ -65,9 +67,13 @@ kbd { font: 600 14px/1 ui-monospace, Menlo, monospace; background: var(--card); 
 footer { text-align: center; color: var(--ink-soft); font-size: 14px; padding: 0 16px 32px; }
 footer nav { margin: 0 0 8px; }
 footer nav a { font-weight: 600; }
+footer p { margin: 4px 0; }
+footer .legal { font-size: 12px; max-width: 560px; margin: 12px auto 0; }
 
 @media (max-width: 640px) {
   header h1 { font-size: 32px; }
+  .get { gap: 10px; }
+  .get img { height: 50px; }
   .how, .gallery { grid-template-columns: 1fr; }
   .screen { padding: 6px; border-radius: 16px; }
   .screen img, .screen video { border-radius: 10px; }
